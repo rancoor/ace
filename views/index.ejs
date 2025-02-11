@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= name %>'s Portfolio</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="name"><%= name %></h1>
+                <p class="profession"><%= profession %></p>
+                <p class="background"><%= background %></p>
+            </div>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p><%= about %></p>
+        </div>
+    </section>
+
+    <section class="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <% skills.forEach(skill => { %>
+                    <li><%= skill %></li>
+                <% }) %>
+            </ul>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>If you want to get in touch, feel free to email me at <a href="mailto:<%= contactEmail %>"><%= contactEmail %></a>.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <%= new Date().getFullYear() %> <%= name %></p>
+        </div>
+    </footer>
+</body>
+</html>
